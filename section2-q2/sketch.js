@@ -28,18 +28,7 @@ function setup() {
       ellipse(a*size+size/2,b*size+size/2,22);
 }
   }
-   for(let c = 0; c < 8; c++){
-    for(let d = 3; d < 5; d++){
-       if((c+d)%2==0){
-        fill(255);
-      }
-      else{
-        fill(150);
-      }
-      console.log(c,d);
-      ellipse(c*size+size/2,d*size+size/2,22);
-}
-   }
+
      for(let e = 0; e < 8; e++){
     for(let f = 5; f < 8; f++){
        if((e+f)%2==0){
