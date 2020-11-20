@@ -29,25 +29,29 @@ if(x>250 && x<360 && y>100 && y<210){ //タイル1:水
 }
 
 
+
 //以下吹き出しの設定
 function balloon(t,x,y,color){
   let w = textWidth(t);
   let h = textAscent() + textDescent();
   let p = 10;
-  let x = x - (w/2-p);
-  let y = y - (h/2-p);
+  let a = w + p * 2
+  let b = h + p * 2
+  let c = w /2 + p
+  let d = h /2 + p
 
+//吹き出し本体
   noStroke();
   fill(color);
-  rect(x, y, w + p * 2, h + p * 2);
-  ellipse(x, y + (h+p*2)/2, h+p*2);
-  ellipse(x + (w+p*2), y+(h+p*2)/2, h+p*2);
-  tri(x+(w+p*2)/2-5, y+(h+p*2));
+  rect(x-c, y-d, a, b);
+  ellipse(x-c, y+b/2-d , b);
+  ellipse(x+a-c, y+b/2-d, b);
+  tri(x+a/2-5-c, y+b-d);
   fill(255);
-  text(t, x + p, y + h + p/2);
+  text(t, x+p-c, y+h+p/2-d);
 }
 
-
+//吹き出し尻尾
 function tri(x, y){
   beginShape();
 
@@ -57,5 +61,6 @@ function tri(x, y){
 
   endShape(CLOSE);
 }
+
 
 }
