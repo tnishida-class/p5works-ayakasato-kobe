@@ -14,7 +14,6 @@ function draw(){
   background(160, 192, 255);
   image(img,0,0);
 
-keyPressed();
 let x = mouseX;
 let y = mouseY;
 let gray = color(255, 255, 255);
