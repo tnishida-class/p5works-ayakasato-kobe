@@ -37,13 +37,101 @@ if(x>360 && x<470 && y>100 && y<210){ //タイル2:肉
   pop();
 }
 
+if(x>470 && x<580 && y>100 && y<210){ //タイル3:じゃがいも
+  push();
+  fill(gray);
+  noStroke();
+  rect(470,100,110,110)
+  balloon("Картошка",525,155,black);
+  pop();
+}
 
+if(x>580 && x<690 && y>100 && y<210){ //タイル4:にんじん
+  push();
+  fill(gray);
+  noStroke();
+  rect(580,100,110,110)
+  balloon("морковь",635,155,black);
+  pop();
+}
+
+if(x>250 && x<360 && y>210 && y<320){ //タイル5:たまねぎ
+  push();
+  fill(gray);
+  noStroke();
+  rect(250,210,110,110)
+  balloon("лук",305,265,black);
+  pop();
+}
+
+if(x>360 && x<470 && y>210 && y<320){ //タイル6:油
+  push();
+  fill(gray);
+  noStroke();
+  rect(360,210,110,110)
+  balloon("масло",415,265,black);
+  pop();
+}
+
+if(x>470 && x<580 && y>210 && y<320){ //タイル7:キャベツ
+  push();
+  fill(gray);
+  noStroke();
+  rect(470,210,110,110)
+  balloon("капуста",525,265,black);
+  pop();
+}
+
+if(x>580 && x<690 && y>210 && y<320){ //タイル8:ビーツ
+  push();
+  fill(gray);
+  noStroke();
+  rect(580,210,110,110)
+  balloon("свёкла",525,265,black);
+  pop();
+}
+
+if(x>250 && x<360 && y>320 && y<430){ //タイル9:塩
+  push();
+  fill(gray);
+  noStroke();
+  rect(250,320,110,110)
+  balloon("соль",305,375,black);
+  pop();
+}
+
+if(x>360 && x<470 && y>320 && y<430){ //タイル10:ハーブ
+  push();
+  fill(gray);
+  noStroke();
+  rect(360,320,110,110)
+  balloon("зелень",415,375,black);
+  pop();
+}
+
+if(x>470 && x<360 && y>320 && y<430){ //タイル11:ニンニク
+  push();
+  fill(gray);
+  noStroke();
+  rect(470,320,110,110)
+  balloon("чеснок",415,375,black);
+  pop();
+}
+
+if(x>580 && x<360 && y>320 && y<430){ //タイル12:胡椒
+  push();
+  fill(gray);
+  noStroke();
+  rect(580,320,110,110)
+  balloon("перец",525,375,black);
+  pop();
+}
 
 //以下吹き出しの設定
 function balloon(t,x,y,color){
   let w = textWidth(t);
   let h = textAscent() + textDescent();
-  let p = 10;
+  let p = 14;
   let a = w + p * 2
   let b = h + p * 2
   let c = w /2 + p
@@ -51,13 +139,16 @@ function balloon(t,x,y,color){
 
 //吹き出し本体
   noStroke();
+  textSize(18);
   fill(color);
   rect(x-c, y-d, a, b);
   ellipse(x-c, y+b/2-d , b);
   ellipse(x+a-c, y+b/2-d, b);
   tri(x+a/2-5-c, y+b-d);
   fill(255);
-  text(t, x+p-c, y+h+p/2-d);
+
+  text(t, x-c+6, y+h+p/2-d+2)
+
 }
 
 //吹き出し尻尾
@@ -70,6 +161,5 @@ function tri(x, y){
 
   endShape(CLOSE);
 }
-
 
 }
