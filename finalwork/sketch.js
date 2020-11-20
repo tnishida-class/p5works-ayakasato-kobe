@@ -24,7 +24,7 @@ if(x>250 && x<360 && y>100 && y<210){ //タイル1:水
   fill(gray);
   noStroke();
   rect(250,100,110,110)
-  balloon(вода,305,155,black);
+  balloon("вода"",305,155,black);
   pop();
 }
 
