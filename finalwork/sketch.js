@@ -10,10 +10,7 @@ function preload(){
   img = loadImage('background.png');
 }
 
-let PixelMplus10-Regular;
-function preload(){
-  PixelMplus10-Regular = loadFont('PixelMplus10-Regular.ttf')
-}
+
 
 function draw(){
   background(160, 192, 255);
@@ -21,7 +18,7 @@ function draw(){
   fill(black);
   rect(0,460,940,140);
   textSize(30);
-  textfont(PixelMplus10-Regular);
+
   text("ボルシチを作ろう！",470-textWidth/2,50+textAscent);
 
 let x = mouseX;
