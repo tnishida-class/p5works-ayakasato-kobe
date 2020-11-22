@@ -22,6 +22,7 @@ function draw(){
 
   text("ボルシチを作ろう！",470-textWidth/2,50+textAscent);
   pop();
+}
 
 let x = mouseX;
 let y = mouseY;
