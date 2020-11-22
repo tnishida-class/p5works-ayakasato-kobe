@@ -2,21 +2,23 @@
 //https://tnishida-class.github.io/p5works-ayakasato-kobe/finalwork/index.html
 
 function setup(){
-  createCanvas(720, 595);
+  createCanvas(940, 600);
 }
 
 let img;
 function preload(){
-  img = loadImage('test.png');
+  img = loadImage('background.png');
 }
 
 function draw(){
   background(160, 192, 255);
   image(img,0,0);
+  fill(black);
+  rect(0,460,940,140);
 
 let x = mouseX;
 let y = mouseY;
-let gray = color(255, 255, 255);
+let gray = color(217, 215, 212);
 let black = color(0);
 
 if(x>250 && x<360 && y>100 && y<210){ //タイル1:水
