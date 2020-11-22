@@ -115,7 +115,7 @@ if(x>470 && x<580 && y>320 && y<430){ //タイル11:ニンニク
   fill(gray);
   noStroke();
   rect(470,320,110,110)
-  balloon("чеснок",415,375,black);
+  balloon("чеснок",525,375,black);
   pop();
 }
 
@@ -124,7 +124,7 @@ if(x>580 && x<690 && y>320 && y<430){ //タイル12:胡椒
   fill(gray);
   noStroke();
   rect(580,320,110,110)
-  balloon("перец",525,375,black);
+  balloon("перец",635,375,black);
   pop();
 }
 
