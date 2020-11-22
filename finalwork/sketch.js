@@ -13,7 +13,7 @@ function preload(){
 function draw(){
   background(160, 192, 255);
   image(img,0,0);
-  
+
 
 let x = mouseX;
 let y = mouseY;
@@ -141,7 +141,7 @@ function balloon(t,x,y,color){
 //吹き出し本体
   noStroke();
   textSize(18);
-  fill(color);
+  fill(black);
   rect(x-c, y-d, a, b);
   ellipse(x-c, y+b/2-d , b);
   ellipse(x+a-c, y+b/2-d, b);
