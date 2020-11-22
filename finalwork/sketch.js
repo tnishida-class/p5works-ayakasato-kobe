@@ -10,7 +10,8 @@ function preload(){
   img = loadImage('background.png');
 }
 
-
+let gray = color(217, 215, 212);
+let black = color(0);
 
 function draw(){
   push();
@@ -26,8 +27,7 @@ function draw(){
 
 let x = mouseX;
 let y = mouseY;
-let gray = color(217, 215, 212);
-let black = color(0);
+
 
 if(x>250 && x<360 && y>100 && y<210){ //タイル1:水
   push();
