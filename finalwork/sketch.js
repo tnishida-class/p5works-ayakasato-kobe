@@ -10,10 +10,12 @@ function preload(){
   img = loadImage('background.png');
 }
 
-let gray = color(217, 215, 212);
-let black = color(0);
 
 function draw(){
+
+  let gray = color(217, 215, 212);
+  let black = color(0);
+
   push();
   background(160, 192, 255);
   image(img,0,0);
@@ -23,7 +25,7 @@ function draw(){
 
   text("ボルシチを作ろう！",470-textWidth/2,50+textAscent);
   pop();
-}
+
 
 let x = mouseX;
 let y = mouseY;
@@ -170,6 +172,7 @@ function tri(x, y){
   vertex(x+5, y+10);
 
   endShape(CLOSE);
+}
 }
 
 }
