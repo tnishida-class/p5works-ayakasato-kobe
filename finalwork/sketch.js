@@ -10,26 +10,15 @@ function preload(){
   img = loadImage('background.png');
 }
 
-
 function draw(){
-
-  let gray = color(217, 215, 212);
-  let black = color(0);
-
-  push();
   background(160, 192, 255);
   image(img,0,0);
-  fill(black);
-  rect(0,460,940,140);
-  textSize(30);
-
-  text("ボルシチを作ろう！",470-textWidth/2,50+textAscent);
-  pop();
-
+  
 
 let x = mouseX;
 let y = mouseY;
-
+let gray = color(217, 215, 212);
+let black = color(0);
 
 if(x>250 && x<360 && y>100 && y<210){ //タイル1:水
   push();
@@ -172,7 +161,6 @@ function tri(x, y){
   vertex(x+5, y+10);
 
   endShape(CLOSE);
-}
 }
 
 }
