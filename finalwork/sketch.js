@@ -13,6 +13,7 @@ function preload(){
 
 
 function draw(){
+  push();
   background(160, 192, 255);
   image(img,0,0);
   fill(black);
@@ -20,6 +21,7 @@ function draw(){
   textSize(30);
 
   text("ボルシチを作ろう！",470-textWidth/2,50+textAscent);
+  pop();
 
 let x = mouseX;
 let y = mouseY;
