@@ -20,6 +20,9 @@ let y = mouseY;
 let gray = color(217, 215, 212);
 let black = color(0);
 
+fill(black);
+rect(0,460,940,140);
+
 if(x>250 && x<360 && y>100 && y<210){ //タイル1:水
   push();
   fill(gray);
