@@ -22,6 +22,10 @@ let black = color(0);
 
 fill(black);
 rect(0,460,940,140);
+textSize(30);
+text("ボルシチを作ろう！",470-textWidth/2,50+textAscent);
+fill(255)
+text("アイコンにカーソルを合わせるとロシア語で表示されます",470-textWidth/2,500+textAscent);
 
 if(x>250 && x<360 && y>100 && y<210){ //タイル1:水
   push();
