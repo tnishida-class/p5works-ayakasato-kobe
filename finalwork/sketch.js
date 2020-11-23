@@ -20,20 +20,12 @@ let y = mouseY;
 let gray = color(217, 215, 212);
 let black = color(0);
 
-push;
-fill(black);
-rect(0,460,940,140);
-textSize(30);
-text("ボルシチを作ろう！",470-textWidth("ボルシチを作ろう")/2,50+textAscent("ボルシチを作ろう"));
-fill(255)
-text("アイコンにカーソルを合わせるとロシア語で表示されます",470-textWidth("アイコンにカーソルを合わせるとロシア語で表示されます")/2,500+textAscent("アイコンにカーソルを合わせるとロシア語で表示されます"));
-pop;
 
 if(x>250 && x<360 && y>100 && y<210){ //タイル1:水
   push();
   fill(gray);
   noStroke();
-  rect(250,100,110,110)
+  rect(250,100,110,110);
   balloon("вода",305,155,black);
   pop();
 }
@@ -42,7 +34,7 @@ if(x>360 && x<470 && y>100 && y<210){ //タイル2:肉
   push();
   fill(gray);
   noStroke();
-  rect(360,100,110,110)
+  rect(360,100,110,110);
   balloon("мясо",415,155,black);
   pop();
 }
@@ -51,7 +43,7 @@ if(x>470 && x<580 && y>100 && y<210){ //タイル3:じゃがいも
   push();
   fill(gray);
   noStroke();
-  rect(470,100,110,110)
+  rect(470,100,110,110);
   balloon("Картошка",525,155,black);
   pop();
 }
@@ -60,7 +52,7 @@ if(x>580 && x<690 && y>100 && y<210){ //タイル4:にんじん
   push();
   fill(gray);
   noStroke();
-  rect(580,100,110,110)
+  rect(580,100,110,110);
   balloon("морковь",635,155,black);
   pop();
 }
@@ -69,7 +61,7 @@ if(x>250 && x<360 && y>210 && y<320){ //タイル5:たまねぎ
   push();
   fill(gray);
   noStroke();
-  rect(250,210,110,110)
+  rect(250,210,110,110);
   balloon("лук",305,265,black);
   pop();
 }
@@ -78,7 +70,7 @@ if(x>360 && x<470 && y>210 && y<320){ //タイル6:油
   push();
   fill(gray);
   noStroke();
-  rect(360,210,110,110)
+  rect(360,210,110,110);
   balloon("масло",415,265,black);
   pop();
 }
@@ -87,7 +79,7 @@ if(x>470 && x<580 && y>210 && y<320){ //タイル7:キャベツ
   push();
   fill(gray);
   noStroke();
-  rect(470,210,110,110)
+  rect(470,210,110,110);
   balloon("капуста",525,265,black);
   pop();
 }
@@ -96,7 +88,7 @@ if(x>580 && x<690 && y>210 && y<320){ //タイル8:ビーツ
   push();
   fill(gray);
   noStroke();
-  rect(580,210,110,110)
+  rect(580,210,110,110);
   balloon("свёкла",635,265,black);
   pop();
 }
@@ -105,7 +97,7 @@ if(x>250 && x<360 && y>320 && y<430){ //タイル9:塩
   push();
   fill(gray);
   noStroke();
-  rect(250,320,110,110)
+  rect(250,320,110,110);
   balloon("соль",305,375,black);
   pop();
 }
@@ -114,7 +106,7 @@ if(x>360 && x<470 && y>320 && y<430){ //タイル10:ハーブ
   push();
   fill(gray);
   noStroke();
-  rect(360,320,110,110)
+  rect(360,320,110,110);
   balloon("зелень",415,375,black);
   pop();
 }
@@ -123,7 +115,7 @@ if(x>470 && x<580 && y>320 && y<430){ //タイル11:ニンニク
   push();
   fill(gray);
   noStroke();
-  rect(470,320,110,110)
+  rect(470,320,110,110);
   balloon("чеснок",525,375,black);
   pop();
 }
@@ -132,32 +124,38 @@ if(x>580 && x<690 && y>320 && y<430){ //タイル12:胡椒
   push();
   fill(gray);
   noStroke();
-  rect(580,320,110,110)
+  rect(580,320,110,110);
   balloon("перец",635,375,black);
   pop();
 }
 
+//ボルシチ
+if(x>645 && x<770 && y>10 && y<95){
+  push();
+  fill(gray);
+  noStroke();
+  rect(645,10,125,85);
+  balloon("Борщ",635,375,black);
+  pop();
+}
+
 //以下吹き出しの設定
+push();
 function balloon(t,x,y,color){
   let w = textWidth(t);
-  let h = textAscent() + textDescent();
-  let p = 14;
-  let a = w + p * 2
-  let b = h + p * 2
-  let c = w /2 + p
-  let d = h /2 + p
+
+
 
 //吹き出し本体
   noStroke();
   textSize(18);
   fill(black);
-  rect(x-c, y-d, a, b);
-  ellipse(x-c, y+b/2-d , b);
-  ellipse(x+a-c, y+b/2-d, b);
-  tri(x+a/2-5-c, y+b-d);
+  rect(x-(textWidth(t)/2+10), y-23, textWidth(t)+20, 46);
+  ellipse(x-(textWidth(t)/2+10), y , 46);
+  ellipse(x+(textWidth(t)/2+10), y, 46);
+  tri(x-5, y+23);
   fill(255);
-
-  text(t, x-c+6, y+h+p/2-d+2)
+  text(t, x-(textWidth(t)/2), y+6);
 
 }
 
@@ -171,5 +169,6 @@ function tri(x, y){
 
   endShape(CLOSE);
 }
+pop();
 
 }
