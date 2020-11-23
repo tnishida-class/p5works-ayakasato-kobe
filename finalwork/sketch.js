@@ -2,7 +2,7 @@
 //https://tnishida-class.github.io/p5works-ayakasato-kobe/finalwork/index.html
 
 function setup(){
-  createCanvas(940, 690);
+  createCanvas(940, 610);
 }
 
 let img;
