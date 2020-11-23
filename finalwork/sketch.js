@@ -10,6 +10,12 @@ function preload(){
   img = loadImage('background.png');
 }
 
+let mySound;
+function preload(){
+  soundFormats('mp3');
+  mySound = loadSound('select01.mp3')
+}
+
 function draw(){
   background(0);
   image(img,0,0);
@@ -27,6 +33,7 @@ if(x>250 && x<360 && y>100 && y<210){ //タイル1:水
   noStroke();
   rect(250,100,110,110);
   balloon("вода",305,155,black);
+  mySound.play();
   pop();
 }
 
