@@ -135,7 +135,28 @@ if(x>645 && x<770 && y>10 && y<95){
   fill(gray);
   noStroke();
   rect(645,10,125,85);
-  balloon("Борщ",635,375,black);
+  balloon("Борщ",708,53,black);
+  pop();
+}
+
+//少女
+if(x>15 && x<165 && y>0 && y<440){
+  push();
+  balloon("Девушка",220,130,black);
+  pop();
+}
+
+//鳥
+if(x>810 && x<920 && y>120 && y<240){
+  push();
+  balloon("птица",840,70,black);
+  pop();
+}
+
+//犬
+if(x>700 && x<860 && y>280 && y<460){
+  push();
+  balloon("собака",730,190,black);
   pop();
 }
 
