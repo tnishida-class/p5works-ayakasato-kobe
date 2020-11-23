@@ -2,7 +2,7 @@
 //https://tnishida-class.github.io/p5works-ayakasato-kobe/finalwork/index.html
 
 function setup(){
-  createCanvas(940, 600);
+  createCanvas(940, 690);
 }
 
 let img;
@@ -11,7 +11,7 @@ function preload(){
 }
 
 function draw(){
-  background(160, 192, 255);
+  background(0);
   image(img,0,0);
 
 
@@ -142,7 +142,7 @@ if(x>645 && x<770 && y>10 && y<95){
 //少女
 if(x>15 && x<165 && y>0 && y<440){
   push();
-  balloon("Девушка",220,130,black);
+  balloon("Девушка",220,180,black);
   pop();
 }
 
@@ -156,7 +156,7 @@ if(x>810 && x<920 && y>120 && y<240){
 //犬
 if(x>700 && x<860 && y>280 && y<460){
   push();
-  balloon("собака",730,190,black);
+  balloon("собака",730,195,black);
   pop();
 }
 
@@ -175,7 +175,7 @@ function balloon(t,x,y,color){
   ellipse(x-(textWidth(t)/2+10), y , 46);
   ellipse(x+(textWidth(t)/2+10), y, 46);
   tri(x-5, y+23);
-  fill(255);
+  fill(gray);
   text(t, x-(textWidth(t)/2), y+6);
 
 }
