@@ -169,6 +169,14 @@ function balloon(t,x,y,color){
 
 //吹き出し本体
   noStroke();
+
+//吹き出し装飾
+  fill(gray);
+    rect(x-(textWidth(t)/1.5+16), y-27, textWidth(t)+46, 54);
+   ellipse(x-(textWidth(t)/1.5+16), y , 54);
+   ellipse(x+(textWidth(t)/1.5+16), y, 54);
+   tritwo(x-7.5, y+27);
+
   textSize(18);
   fill(black);
   rect(x-(textWidth(t)/2+10), y-23, textWidth(t)+20, 46);
@@ -191,5 +199,16 @@ function tri(x, y){
   endShape(CLOSE);
 }
 pop();
+
+//吹き出し尻尾2
+function tritwo(x, y){
+  beginShape();
+
+  vertex(x, y);
+  vertex(x+14, y);
+  vertex(x+7, y+14);
+
+  endShape(CLOSE);
+}
 
 }
